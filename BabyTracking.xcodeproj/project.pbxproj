@@ -8,17 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		02DFDEBE27BD54E800A70753 /* BabyTrackingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DFDEBD27BD54E800A70753 /* BabyTrackingApp.swift */; };
-		02DFDEC027BD54E800A70753 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DFDEBF27BD54E800A70753 /* ContentView.swift */; };
+		02DFDEC027BD54E800A70753 /* CameraFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DFDEBF27BD54E800A70753 /* CameraFeedView.swift */; };
 		02DFDEC227BD54EB00A70753 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02DFDEC127BD54EB00A70753 /* Assets.xcassets */; };
 		02DFDEC527BD54EB00A70753 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02DFDEC427BD54EB00A70753 /* Preview Assets.xcassets */; };
+		02DFDECE27BD58CB00A70753 /* CameraFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DFDECD27BD58CB00A70753 /* CameraFeedViewModel.swift */; };
+		02DFDED327BD5CD200A70753 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DFDED227BD5CD200A70753 /* FrameView.swift */; };
+		02DFDED627BD5D3600A70753 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DFDED527BD5D3600A70753 /* CameraManager.swift */; };
+		02DFDED827BD61FF00A70753 /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DFDED727BD61FF00A70753 /* FrameManager.swift */; };
+		02DFDEDB27BD63F600A70753 /* CVPixelBufferToCGImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DFDEDA27BD63F600A70753 /* CVPixelBufferToCGImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		02DFDEBA27BD54E800A70753 /* BabyTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DFDEBD27BD54E800A70753 /* BabyTrackingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyTrackingApp.swift; sourceTree = "<group>"; };
-		02DFDEBF27BD54E800A70753 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		02DFDEBF27BD54E800A70753 /* CameraFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeedView.swift; sourceTree = "<group>"; };
 		02DFDEC127BD54EB00A70753 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02DFDEC427BD54EB00A70753 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		02DFDECD27BD58CB00A70753 /* CameraFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeedViewModel.swift; sourceTree = "<group>"; };
+		02DFDED227BD5CD200A70753 /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
+		02DFDED527BD5D3600A70753 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		02DFDED727BD61FF00A70753 /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
+		02DFDEDA27BD63F600A70753 /* CVPixelBufferToCGImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVPixelBufferToCGImage+Extension.swift"; sourceTree = "<group>"; };
+		02DFDEDC27BD661400A70753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +62,12 @@
 		02DFDEBC27BD54E800A70753 /* BabyTracking */ = {
 			isa = PBXGroup;
 			children = (
+				02DFDEDC27BD661400A70753 /* Info.plist */,
+				02DFDED927BD63D800A70753 /* Helper */,
+				02DFDED427BD5D2C00A70753 /* Manager */,
+				02DFDECF27BD5CB700A70753 /* Component */,
+				02DFDECC27BD588800A70753 /* Scenes */,
 				02DFDEBD27BD54E800A70753 /* BabyTrackingApp.swift */,
-				02DFDEBF27BD54E800A70753 /* ContentView.swift */,
 				02DFDEC127BD54EB00A70753 /* Assets.xcassets */,
 				02DFDEC327BD54EB00A70753 /* Preview Content */,
 			);
@@ -65,6 +80,40 @@
 				02DFDEC427BD54EB00A70753 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		02DFDECC27BD588800A70753 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				02DFDEBF27BD54E800A70753 /* CameraFeedView.swift */,
+				02DFDECD27BD58CB00A70753 /* CameraFeedViewModel.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		02DFDECF27BD5CB700A70753 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				02DFDED227BD5CD200A70753 /* FrameView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		02DFDED427BD5D2C00A70753 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				02DFDED527BD5D3600A70753 /* CameraManager.swift */,
+				02DFDED727BD61FF00A70753 /* FrameManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		02DFDED927BD63D800A70753 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				02DFDEDA27BD63F600A70753 /* CVPixelBufferToCGImage+Extension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02DFDEC027BD54E800A70753 /* ContentView.swift in Sources */,
+				02DFDED327BD5CD200A70753 /* FrameView.swift in Sources */,
+				02DFDED827BD61FF00A70753 /* FrameManager.swift in Sources */,
+				02DFDEC027BD54E800A70753 /* CameraFeedView.swift in Sources */,
+				02DFDECE27BD58CB00A70753 /* CameraFeedViewModel.swift in Sources */,
 				02DFDEBE27BD54E800A70753 /* BabyTrackingApp.swift in Sources */,
+				02DFDED627BD5D3600A70753 /* CameraManager.swift in Sources */,
+				02DFDEDB27BD63F600A70753 /* CVPixelBufferToCGImage+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,8 +323,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BabyTracking/Preview Content\"";
+				DEVELOPMENT_TEAM = 265G3QMY9J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BabyTracking/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please agree the usage camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -298,8 +355,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BabyTracking/Preview Content\"";
+				DEVELOPMENT_TEAM = 265G3QMY9J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BabyTracking/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please agree the usage camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
